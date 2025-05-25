@@ -9,8 +9,15 @@ export default function Chessboard() {
     let board = [];
            for(let j = verticalAxis.length-1; j>=0; j--){
            for(let i = 0; i< horizontalAxis.length; i++){
+              //   need to add 2 because i starts at 0 and j starts at an offset of 1
+                const number = i + j + 2;
+                if (number %2 ===0){
+                board.push(<div className="tile black-tile"> {horizontalAxis[i]}{verticalAxis[j]} </div>)
 
-                board.push(<div className="tile"> {horizontalAxis[i]}{verticalAxis[j]} </div>)
+                } else {
+                board.push(<div className="tile white-tile"> {horizontalAxis[i]}{verticalAxis[j]} </div>)
+
+                }
             }
            }
     return <div id="chessboard">
