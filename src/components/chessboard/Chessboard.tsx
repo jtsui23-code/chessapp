@@ -12,13 +12,7 @@ export default function Chessboard() {
            for(let i = 0; i< horizontalAxis.length; i++){
               //   need to add 2 because i starts at 0 and j starts at an offset of 1
                 const number = i + j + 2;
-                if (number %2 ===0){
-                board.push(<Tile />)
-
-                } else {
-                board.push(<Tile />)
-
-                }
+                board.push(<Tile number={number}/>)
             }
            }
     return <div id="chessboard">

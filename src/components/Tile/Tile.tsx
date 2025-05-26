@@ -1,6 +1,18 @@
 import './Tile.css'
 
-export default function Tile() {
+interface Props {
+    number: number
 
-    return <div> Hello! </div>
+}
+
+
+export default function Tile({number}:Props) {
+    if (number % 2 === 0) {
+        return <div className = "tile black-tile"> Hello! </div>
+
+    } else {
+        return <div className = "tile white-tile"> Hello! </div>
+
+    }
+
 }
